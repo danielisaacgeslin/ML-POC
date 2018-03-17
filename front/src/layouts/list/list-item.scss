@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+.ListItem {
+  padding: $gap-middle;
+
+  &__image {
+    border-radius: $radius;
+    max-width: $max-thumbnail-size;
+  }
+
+  &__price {
+    color: $color-gray-dark;
+    font-size: $text-big;
+  }
+
+  &__title {
+    color: $color-gray-dark;
+    font-size: $text-middle;
+  }
+
+  &__address {
+    color: $color-gray-middle;
+    font-size: $text-extra-small;
+  }
+}

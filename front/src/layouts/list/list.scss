@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+.List {
+  &__item_container {
+    background: $color-white;
+    border-radius: $radius;
+    list-style: none;
+    margin: $gap-big 0;
+    padding: 0 $gap-small;
+  }
+
+  &__separator {
+    width: 100%;
+    border-bottom: 2px solid $color-gray-ultra-light;
+  }
+}

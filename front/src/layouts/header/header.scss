@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.Header {
+  background-color: $color-primary;
+  padding-top: $gap-small;
+  padding-bottom: $gap-small;
+
+  &__input {
+    border: none;
+    display: inline-block;
+    color: $color-gray-dark;
+    font-size: $text-middle;
+    padding: ($gap-small / 2) $gap-small;
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+
+  &__btn {
+    background-color: $color-gray-ultra-light;
+    border: none;
+    padding: $gap-small $gap-middle;
+    cursor: pointer;
+  }
+}

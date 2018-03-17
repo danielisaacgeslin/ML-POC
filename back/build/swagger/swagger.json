@@ -15,6 +15,12 @@
 				"price": {
 					"type": "object"
 				},
+				"permalink": {
+					"type": "string"
+				},
+				"thumbnail": {
+					"type": "string"
+				},
 				"picture": {
 					"type": "string"
 				},
@@ -37,6 +43,9 @@
 				},
 				"address": {
 					"type": "object"
+				},
+				"description": {
+					"type": "string"
 				},
 				"args": {
 					"type": "object"
