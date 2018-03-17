@@ -1,0 +1,136 @@
+{
+	"basePath": "",
+	"consumes": [
+		"application/json"
+	],
+	"definitions": {
+		"ItemModel": {
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"title": {
+					"type": "string"
+				},
+				"price": {
+					"type": "object"
+				},
+				"picture": {
+					"type": "string"
+				},
+				"condition": {
+					"type": "string"
+				},
+				"free_shipping": {
+					"type": "boolean",
+					"default": false
+				},
+				"categories": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": []
+				},
+				"author": {
+					"type": "object"
+				},
+				"address": {
+					"type": "object"
+				},
+				"args": {
+					"type": "object"
+				}
+			},
+			"required": [
+				"args"
+			],
+			"type": "object"
+		}
+	},
+	"info": {
+		"title": "hotels-back",
+		"version": "1.0.0",
+		"license": {
+			"name": "ISC"
+		}
+	},
+	"paths": {
+		"/items/{id}": {
+			"get": {
+				"operationId": "GetById",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ItemModel"
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "string"
+					}
+				]
+			}
+		},
+		"/items": {
+			"get": {
+				"operationId": "GetItems",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ItemModel"
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "search",
+						"required": true,
+						"type": "string"
+					}
+				]
+			}
+		},
+		"/ping": {
+			"get": {
+				"operationId": "Ping",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "string"
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"produces": [
+		"application/json"
+	],
+	"swagger": "2.0",
+	"securityDefinitions": {}
+}
